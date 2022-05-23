@@ -1,4 +1,5 @@
 <?php
 <HEAD></HEAD>
-echo "Hello Nasu!";
-
+<BODY>
+    echo "Hello Nasu!";
+</BODY>
