@@ -1,5 +1,7 @@
 <?php
-<HEAD></HEAD>
+<HEAD>
+<TITLE>Hello world</TITLE>
+</HEAD>
 <BODY>
     echo "Hello Nasu!";
     echo "ibayashi";
