@@ -43,3 +43,17 @@ Public Function getFileArray(ByVal targetPath As String, Optional ByVal attr As 
     getFileArray = resultArray
 End Function
 
+'-----------------------------------------------------
+' Outlookメールの作成
+'-----------------------------------------------------
+Public Sub CreateOutlookMail()
+    Dim ola As outlook.Application: Set olk = New outlook.Application
+    Dim msg As outlook.Mailitem: Set msg = ola.createitemfromtemplate("c:\temp\雛形.msg")
+    With msg
+        .To = "yahoo@yahooooooooo.co.jp"
+        .CC = "yahoo@gooooooooooooooooooogle.com"
+        .Subject = "メールタイトル"
+        .htmlbody = Replace(.htmlbody, "●●様", "小泉様")
+        sts = .Recipients.ResolveAll   ' [名前の確認]を押す。一人でも解決できないと sts == false に。
+    End With
+End Sub
